@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1705508011575545300
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1705508011575545301}
+  - component: {fileID: 1705508011575545302}
+  m_Layer: 0
+  m_Name: FishGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1705508011575545301
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705508011575545300}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.20663404, y: 0.12895794, z: -0.42149052}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1705508011575545302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705508011575545300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6077d15fcc0fa04381fe40cc9b92c20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CommonFishs:
+  - {fileID: 6254379802181069616, guid: 0c0f42ef91226774f81fc2aa8163634b, type: 3}
+  - {fileID: 2517082742536327005, guid: 242db0865ce499b46addef8e4a06eaa1, type: 3}
+  - {fileID: 210202559252976255, guid: 38b8a0db46ff78543929b7019163aecb, type: 3}
+  - {fileID: 4363896684523735944, guid: 0020663cc0eff67468d9d90d0eaa52a7, type: 3}
+  - {fileID: 6837081157441107271, guid: eaf2421548f2d204f8f38b54b8e905a8, type: 3}
+  - {fileID: 3739210314189529924, guid: ec6642bab648e7b499d1bad316652416, type: 3}
+  RareFishs:
+  - {fileID: 916429162745542396, guid: cbabd1b1e667af34db29af53ead51058, type: 3}
+  - {fileID: 607499754090166729, guid: 3be170b2cb765834295897ed42693434, type: 3}
+  - {fileID: 925149170676838186, guid: b861aaf7ae3b3d74cb5556cb5bba5b3a, type: 3}
+  - {fileID: 7820539136524846000, guid: 183838cfbf1b5124abfb0b2003e41960, type: 3}
+  EpicFishs:
+  - {fileID: 5988322613852293717, guid: 0cc73e18cbb7b164fa3e579697740d36, type: 3}
+  - {fileID: 5037452160702703864, guid: 8ea5a2be5d24cb344a268ea3457fac06, type: 3}
+  - {fileID: 7331413921475499961, guid: 06b8bda584078154e8f59e111f93ca26, type: 3}
+  - {fileID: 2606692779898074281, guid: 754277ab68426b946882e5d93d3f8c5a, type: 3}
+  Cmin: 1
+  Cmax: 4
+  Rmin: 0.1
+  Rmax: 1
+  Emin: 1
+  Emax: 2
