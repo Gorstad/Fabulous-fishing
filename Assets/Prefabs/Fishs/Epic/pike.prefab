@@ -15,11 +15,11 @@ GameObject:
   - component: {fileID: 2561287817747250461}
   m_Layer: 0
   m_Name: pike
-  m_TagString: Untagged
+  m_TagString: Fish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1641418928611106751
 Transform:
   m_ObjectHideFlags: 0
@@ -120,7 +120,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fishSpeed: -10
   fishScore: 1
+  rb: {fileID: 0}
   movment: {x: 0, y: 0}
+  Hook: {fileID: 0}
+  rope: {fileID: 0}
+  hinge: {fileID: 0}
+  catching: 0
 --- !u!68 &2561287817747250461
 EdgeCollider2D:
   m_ObjectHideFlags: 0

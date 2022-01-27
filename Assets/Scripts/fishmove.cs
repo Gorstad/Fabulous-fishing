@@ -7,8 +7,13 @@ public class fishmove : MonoBehaviour
 {
     [SerializeField] float fishSpeed = 10f;
     [SerializeField] int fishScore = 1;
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
     public Vector2 movment;
+    public GameObject Hook;
+    public GameObject fish;
+    public HingeJoint2D hinge;
+    
+    public bool catching= false;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,30 +28,52 @@ public class fishmove : MonoBehaviour
     }
     void FixedUpdate()
     {
-       
         rb.MovePosition(rb.position + movment * fishSpeed * Time.fixedDeltaTime);
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    
+            void Catching()
+            {
+            if (CompareTag ("Fish") && !catching) 
+              {
+               catching = true;
+               Hook = GameObject.FindGameObjectWithTag ("Player");
+               Hook.AddComponent<HingeJoint2D> ();
+               fish = GetComponent<Collider2D>().gameObject;
+               hinge = Hook.GetComponent<HingeJoint2D>();
+               rb = fish.GetComponent<Rigidbody2D>();
+               hinge.connectedBody = rb;  
+              //  rb.isKinematic = true;
+              fishSpeed = 0f;
+               print("catch");
+        
+              }
+            }
+        
+        void OnTriggerEnter2D(Collider2D collision )
     {
         switch(collision.gameObject.tag)
         {
-            case "Destroy":
+            case "Wall":
                Destroy(gameObject);
             break;
+
             case "Player":
-              print("catch");
-              
+              Catching();      
             break;
+        
             // default:
             //    print("nope");
             //    break;
         }
+    }
         // Wall wall = collision.GetComponent<Wall>();
         // if (wall !=null)
         // {
         //  Destroy(gameObject);
         // }
         
-    }
+    
+    
 }
+

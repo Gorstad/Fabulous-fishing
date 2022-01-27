@@ -15,11 +15,11 @@ GameObject:
   - component: {fileID: 6254379802181069631}
   m_Layer: 0
   m_Name: dace
-  m_TagString: Untagged
+  m_TagString: Fish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6254379802181069627
 Transform:
   m_ObjectHideFlags: 0
@@ -120,7 +120,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fishSpeed: -4
   fishScore: 1
+  rb: {fileID: 0}
   movment: {x: 0, y: 0}
+  Hook: {fileID: 1214294555359773999, guid: ce2fa8752076475488b76f1709ab8b17, type: 3}
+  rope: {fileID: 0}
+  hinge: {fileID: 0}
+  catching: 0
 --- !u!60 &6254379802181069631
 PolygonCollider2D:
   m_ObjectHideFlags: 0

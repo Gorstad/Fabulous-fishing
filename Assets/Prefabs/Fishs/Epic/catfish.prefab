@@ -15,11 +15,11 @@ GameObject:
   - component: {fileID: 5639034967631456546}
   m_Layer: 0
   m_Name: catfish
-  m_TagString: Untagged
+  m_TagString: Fish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2606692779898074277
 Transform:
   m_ObjectHideFlags: 0
@@ -120,7 +120,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fishSpeed: -10
   fishScore: 1
+  rb: {fileID: 0}
   movment: {x: 0, y: 0}
+  Hook: {fileID: 0}
+  rope: {fileID: 0}
+  hinge: {fileID: 0}
+  catching: 0
 --- !u!60 &5639034967631456546
 PolygonCollider2D:
   m_ObjectHideFlags: 0

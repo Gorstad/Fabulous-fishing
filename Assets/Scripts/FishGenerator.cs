@@ -35,7 +35,7 @@ public class FishGenerator : MonoBehaviour
     {
         yield return new WaitForSeconds (Random.Range (Cmin,Cmax));
         int common = Random.Range(0, CommonFishs.Length);
-        GameObject fish = Instantiate(CommonFishs[common]); 
+        GameObject fish = Instantiate(CommonFishs[1]); 
         bool rightFish = Random.Range(0,2) == 1;
         float y = Random.Range(-4.55f,-0.65f);
         float x;
