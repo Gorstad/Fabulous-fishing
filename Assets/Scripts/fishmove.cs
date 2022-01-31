@@ -9,9 +9,12 @@ public class fishmove : MonoBehaviour
     [SerializeField] int fishScore = 1;
     public Rigidbody2D rb;
     public Vector2 movment;
-    public GameObject Hook;
-    public GameObject fish;
-    public HingeJoint2D hinge;
+    // public GameObject Hook;
+    // public GameObject fish;
+    // public HingeJoint2D hinge;
+    public Rigidbody2D HookAccession;
+    float newFMpos = HookControl.newFpos;
+
     
     public bool catching= false;
     // Start is called before the first frame update
@@ -24,30 +27,37 @@ public class fishmove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       
     }
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movment * fishSpeed * Time.fixedDeltaTime);
+      print(newFMpos);
+      if(!catching)
+      {
+          rb.MovePosition(rb.position + movment * fishSpeed * Time.fixedDeltaTime);
+      }
+      else
+      {
+          rb.MovePosition(HookAccession.position * fishSpeed * Time.fixedDeltaTime);
+      }
     }
 
     
             void Catching()
-            {
-            if (CompareTag ("Fish") && !catching) 
-              {
+            { SendMessage("Catchfish");
+
+            // if (CompareTag ("Fish") && !catching) 
+            //   {
                catching = true;
-               Hook = GameObject.FindGameObjectWithTag ("Player");
-               Hook.AddComponent<HingeJoint2D> ();
-               fish = GetComponent<Collider2D>().gameObject;
-               hinge = Hook.GetComponent<HingeJoint2D>();
-               rb = fish.GetComponent<Rigidbody2D>();
-               hinge.connectedBody = rb;  
-              //  rb.isKinematic = true;
-              fishSpeed = 0f;
-               print("catch");
-        
-              }
+            //    Hook = GameObject.FindGameObjectWithTag ("Player");
+            //    Hook.AddComponent<HingeJoint2D> ();
+            //    fish = GetComponent<Collider2D>().gameObject;
+            //    hinge = Hook.GetComponent<HingeJoint2D>();
+            //    rb = fish.GetComponent<Rigidbody2D>();
+            //    hinge.connectedBody = rb;  
+            //   //  rb.isKinematic = true;
+            //   // fishSpeed = 0f;
+            //   }
             }
         
         void OnTriggerEnter2D(Collider2D collision )

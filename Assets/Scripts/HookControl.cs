@@ -9,6 +9,7 @@ public class HookControl : MonoBehaviour
     [SerializeField] float TopHook = 1f;
     [SerializeField] float BotHook= -1f;
     float newYpos;
+    public static float newFpos;
 
     // Start is called before the first frame update
     void Start()
@@ -20,8 +21,9 @@ public class HookControl : MonoBehaviour
     void Update()
     {
      MoveHook(); 
+     
     }
-    void MoveHook()
+    public void MoveHook()
     {
         if(SystemInfo.deviceType == DeviceType.Desktop)
         {
@@ -50,4 +52,8 @@ public class HookControl : MonoBehaviour
     //  float newYpos = transform.localPosition.y + yOffset;
     //  transform.localPosition = new Vector2(transform.localPosition.x, newYpos);
     }
+     void FixedUpdate()
+     {
+         newFpos = transform.position.y;
+     }
 }

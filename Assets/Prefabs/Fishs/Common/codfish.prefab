@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 2517082742536326993}
   - component: {fileID: 2517082742536326992}
   - component: {fileID: 2517082742536326995}
+  - component: {fileID: 455384545852715879}
   - component: {fileID: 5667416444898585925}
-  - component: {fileID: 3105787910243712465}
   m_Layer: 0
   m_Name: codfish
   m_TagString: Fish
@@ -123,10 +123,27 @@ MonoBehaviour:
   fishScore: 1
   rb: {fileID: 2517082742536326992}
   movment: {x: 0, y: 0}
-  Hook: {fileID: 0}
-  fish: {fileID: 0}
+  Hook: {fileID: 3975684783788666820, guid: 11e6ab725b8fd994f8e284be8cf47fcd, type: 3}
+  fish: {fileID: 2517082742536327005}
   hinge: {fileID: 0}
+  HookAccession: {fileID: 2857051401536623925, guid: 11e6ab725b8fd994f8e284be8cf47fcd, type: 3}
   catching: 0
+--- !u!114 &455384545852715879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2517082742536327005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e213533a7db578142b69d905a5ed4c20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HookAccession: {fileID: 2857051401536623925, guid: 11e6ab725b8fd994f8e284be8cf47fcd, type: 3}
+  rb: {fileID: 2517082742536326992}
+  fMovement: {x: 0, y: 0}
+  catchSpeed: 20
 --- !u!60 &5667416444898585925
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -186,27 +203,3 @@ PolygonCollider2D:
       - {x: 0.2109484, y: -0.009085961}
       - {x: 0.27051616, y: -0.0640513}
       - {x: 0.2956267, y: -0.054605193}
---- !u!233 &3105787910243712465
-HingeJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2517082742536327005}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 3155493908178904591, guid: ce2fa8752076475488b76f1709ab8b17, type: 3}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: -0.22819434, y: 0.002749116}
-  m_ConnectedAnchor: {x: -14.191159, y: 3.679458}
-  m_UseMotor: 0
-  m_Motor:
-    m_MotorSpeed: 0
-    m_MaximumMotorForce: 10000
-  m_UseLimits: 0
-  m_AngleLimits:
-    m_LowerAngle: 0
-    m_UpperAngle: 359
