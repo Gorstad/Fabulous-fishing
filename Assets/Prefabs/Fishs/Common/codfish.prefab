@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2517082742536326993}
   - component: {fileID: 2517082742536326992}
   - component: {fileID: 2517082742536326995}
-  - component: {fileID: 455384545852715879}
+  - component: {fileID: 8873024543294175241}
   - component: {fileID: 5667416444898585925}
   m_Layer: 0
   m_Name: codfish
@@ -121,14 +121,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fishSpeed: -6.5
   fishScore: 1
-  rb: {fileID: 2517082742536326992}
+  rb: {fileID: 0}
   movment: {x: 0, y: 0}
-  Hook: {fileID: 3975684783788666820, guid: 11e6ab725b8fd994f8e284be8cf47fcd, type: 3}
-  fish: {fileID: 2517082742536327005}
-  hinge: {fileID: 0}
-  HookAccession: {fileID: 2857051401536623925, guid: 11e6ab725b8fd994f8e284be8cf47fcd, type: 3}
-  catching: 0
---- !u!114 &455384545852715879
+--- !u!114 &8873024543294175241
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -137,13 +132,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2517082742536327005}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e213533a7db578142b69d905a5ed4c20, type: 3}
+  m_Script: {fileID: 11500000, guid: 5fdac02b34e686744975c02bfcc3e67d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HookAccession: {fileID: 2857051401536623925, guid: 11e6ab725b8fd994f8e284be8cf47fcd, type: 3}
-  rb: {fileID: 2517082742536326992}
-  fMovement: {x: 0, y: 0}
-  catchSpeed: 20
 --- !u!60 &5667416444898585925
 PolygonCollider2D:
   m_ObjectHideFlags: 0

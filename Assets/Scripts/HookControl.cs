@@ -52,8 +52,8 @@ public class HookControl : MonoBehaviour
     //  float newYpos = transform.localPosition.y + yOffset;
     //  transform.localPosition = new Vector2(transform.localPosition.x, newYpos);
     }
-     void FixedUpdate()
-     {
-         newFpos = transform.position.y;
-     }
+    //  void FixedUpdate()
+    //  {
+    //      newFpos = transform.position.y;
+    //  }
 }

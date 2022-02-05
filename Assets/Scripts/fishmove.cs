@@ -9,81 +9,37 @@ public class fishmove : MonoBehaviour
     [SerializeField] int fishScore = 1;
     public Rigidbody2D rb;
     public Vector2 movment;
-    // public GameObject Hook;
-    // public GameObject fish;
-    // public HingeJoint2D hinge;
-    public Rigidbody2D HookAccession;
-    float newFMpos = HookControl.newFpos;
-
-    
-    public bool catching= false;
-    // Start is called before the first frame update
+    private Transform _hook;
+    private Vector3 _hookOffset;
+    private bool _isCatched;
     void Start()
     {
       rb = GetComponent<Rigidbody2D>();
-      
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-       
     }
     void FixedUpdate()
     {
-      print(newFMpos);
-      if(!catching)
+      if(!_isCatched)
       {
           rb.MovePosition(rb.position + movment * fishSpeed * Time.fixedDeltaTime);
       }
       else
       {
-          rb.MovePosition(HookAccession.position * fishSpeed * Time.fixedDeltaTime);
+       followTheHook();
       }
     }
-
-    
-            void Catching()
-            { SendMessage("Catchfish");
-
-            // if (CompareTag ("Fish") && !catching) 
-            //   {
-               catching = true;
-            //    Hook = GameObject.FindGameObjectWithTag ("Player");
-            //    Hook.AddComponent<HingeJoint2D> ();
-            //    fish = GetComponent<Collider2D>().gameObject;
-            //    hinge = Hook.GetComponent<HingeJoint2D>();
-            //    rb = fish.GetComponent<Rigidbody2D>();
-            //    hinge.connectedBody = rb;  
-            //   //  rb.isKinematic = true;
-            //   // fishSpeed = 0f;
-            //   }
-            }
-        
-        void OnTriggerEnter2D(Collider2D collision )
+     public void Catched(Transform hook)
     {
-        switch(collision.gameObject.tag)
-        {
-            case "Wall":
-               Destroy(gameObject);
-            break;
-
-            case "Player":
-              Catching();      
-            break;
+        _isCatched = true;
+        //  transform.localRotation  = Quaternion.Euler (0f,0f,-90f);
+        _hook = hook;
+        _hookOffset = transform.position - _hook.transform.position;
         
-            // default:
-            //    print("nope");
-            //    break;
-        }
     }
-        // Wall wall = collision.GetComponent<Wall>();
-        // if (wall !=null)
-        // {
-        //  Destroy(gameObject);
-        // }
+ 
+    private void followTheHook()
+    {   
         
-    
-    
+        transform.position = _hook.position + _hookOffset;
+    } 
 }
 
