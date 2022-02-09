@@ -39,7 +39,8 @@ public class fishMovment : MonoBehaviour
  
     private void justSwimming()
     {
-        if ((int)Time.time % 5 == 0)
+        
+        if ((int)Time.time % 1 == 0)
             _moveTo = Random.insideUnitCircle * 5;
  
         transform.position = Vector3.MoveTowards(transform.position, _moveTo, Time.deltaTime * Speed);

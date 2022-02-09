@@ -13,13 +13,14 @@ GameObject:
   - component: {fileID: 916429162745542398}
   - component: {fileID: 916429162745542397}
   - component: {fileID: 916429162745542385}
+  - component: {fileID: -3356541057508498693}
   m_Layer: 0
   m_Name: perch
   m_TagString: Fish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &916429162745542384
 Transform:
   m_ObjectHideFlags: 0
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 173c683ffbd47df408427c33af345c48, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -93,7 +94,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 916429162745542396}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -119,13 +120,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fishSpeed: -10
-  fishScore: 1
   rb: {fileID: 0}
   movment: {x: 0, y: 0}
-  Hook: {fileID: 0}
-  rope: {fileID: 0}
-  hinge: {fileID: 0}
-  catching: 0
 --- !u!60 &916429162745542385
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -175,3 +171,16 @@ PolygonCollider2D:
       - {x: 0.16972584, y: -0.029011901}
       - {x: 0.26992396, y: -0.07484788}
       - {x: 0.28610116, y: -0.06720238}
+--- !u!114 &-3356541057508498693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916429162745542396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fdac02b34e686744975c02bfcc3e67d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fishScore: 1

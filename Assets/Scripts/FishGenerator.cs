@@ -7,6 +7,7 @@ public class FishGenerator : MonoBehaviour
     public GameObject[] CommonFishs;
     public GameObject[] RareFishs;
     public GameObject[] EpicFishs;
+    public GameObject Pike;
     // Время спавна обычных рыб
     [SerializeField] float Cmin = 1f;
     [SerializeField] float Cmax = 2f;
@@ -16,19 +17,22 @@ public class FishGenerator : MonoBehaviour
       // Время спавна эпических рыб
     [SerializeField] float Emin = 3f;
     [SerializeField] float Emax = 4f;
-   
+    [SerializeField] float Pmin = 4f;
+    [SerializeField] float Pmax = 5f;
     // Start is called before the first frame update
     void Start()
     {
       StartCoroutine(createCommFish());
       StartCoroutine(createRareFish());
       StartCoroutine(createEpicFish());
+      StartCoroutine(createPike());
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+     
     }
     // Создание рыб обычной редкости
       IEnumerator createCommFish()
@@ -52,8 +56,8 @@ public class FishGenerator : MonoBehaviour
         }
         fish.GetComponent<Transform>().position = new Vector2(x,y);
         StartCoroutine(createCommFish());
-        // Создание редких рыб
     }
+     // Создание редких рыб
     IEnumerator createRareFish()
     {
         yield return new WaitForSeconds (Random.Range (Rmin,Rmax));
@@ -75,7 +79,6 @@ public class FishGenerator : MonoBehaviour
         }
         fish.GetComponent<Transform>().position = new Vector2(x,y);
         StartCoroutine(createRareFish());
-
     }
     // Создание эпических рыб
     IEnumerator createEpicFish()
@@ -99,6 +102,27 @@ public class FishGenerator : MonoBehaviour
         }
         fish.GetComponent<Transform>().position = new Vector2(x,y);
         StartCoroutine(createEpicFish());
-
     }
+    IEnumerator createPike()
+      {
+       yield return new WaitForSeconds (Random.Range(Pmin,Pmax));
+   
+       GameObject fish = Instantiate(Pike);
+       bool rightFish = Random.Range(0,2) == 1;
+        float y = Random.Range(-4.55f,-0.6f);
+        float x;
+        if(rightFish)
+        {
+          x = -10.6f;
+          fish.GetComponent<fishmove>().movment.x = -0.5f;
+          fish.GetComponent<Transform>().Rotate(0f,180f,0f);
+        }
+        else
+        {
+          x = 10.6f;
+          fish.GetComponent<fishmove>().movment.x = 0.5f;
+        }
+        fish.GetComponent<Transform>().position = new Vector2(x,y);
+        StartCoroutine(createPike());
+      } 
 }

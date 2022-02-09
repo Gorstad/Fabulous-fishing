@@ -8,6 +8,8 @@ TagManager:
   - Wall
   - Fish
   - Hole
+  - Pike
+  - FishOnHook
   layers:
   - Default
   - TransparentFX

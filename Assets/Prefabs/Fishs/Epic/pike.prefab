@@ -13,13 +13,14 @@ GameObject:
   - component: {fileID: 5636388630980824455}
   - component: {fileID: 6606578686229201024}
   - component: {fileID: 2561287817747250461}
+  - component: {fileID: 8793279344379602289}
   m_Layer: 0
   m_Name: pike
-  m_TagString: Fish
+  m_TagString: Pike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1641418928611106751
 Transform:
   m_ObjectHideFlags: 0
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: e4bb0eaa99e912a4e8d374393248b258, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -93,7 +94,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5988322613852293717}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -118,14 +119,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9af6da2b4fc6079448865ca3808999ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fishSpeed: -10
-  fishScore: 1
+  fishSpeed: -17
   rb: {fileID: 0}
   movment: {x: 0, y: 0}
-  Hook: {fileID: 0}
-  rope: {fileID: 0}
-  hinge: {fileID: 0}
-  catching: 0
 --- !u!68 &2561287817747250461
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -145,9 +141,9 @@ EdgeCollider2D:
   - {x: -0.6282766, y: 0.061318874}
   - {x: -0.49478617, y: 0.0713771}
   - {x: -0.42790842, y: 0.10760099}
-  - {x: -0.37179273, y: 0.10892918}
+  - {x: -0.32959273, y: 0.12515995}
   - {x: -0.3432147, y: 0.03449533}
-  - {x: -0.39691526, y: -0.028646175}
+  - {x: -0.37743837, y: -0.035138514}
   - {x: -0.50336355, y: 0.0126561895}
   - {x: -0.5756545, y: 0.008928755}
   - {x: -0.6287604, y: 0.058531605}
@@ -155,3 +151,16 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &8793279344379602289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5988322613852293717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fdac02b34e686744975c02bfcc3e67d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fishScore: 1

@@ -6,7 +6,7 @@ using UnityEngine;
 public class fishmove : MonoBehaviour
 {
     [SerializeField] float fishSpeed = 10f;
-    [SerializeField] int fishScore = 1;
+    
     public Rigidbody2D rb;
     public Vector2 movment;
     private Transform _hook;
@@ -30,6 +30,7 @@ public class fishmove : MonoBehaviour
      public void Catched(Transform hook)
     {
         _isCatched = true;
+         gameObject.tag ="FishOnHook";
         //  transform.localRotation  = Quaternion.Euler (0f,0f,-90f);
         _hook = hook;
         _hookOffset = transform.position - _hook.transform.position;

@@ -13,13 +13,14 @@ GameObject:
   - component: {fileID: 2606692779898074283}
   - component: {fileID: 2606692779898074280}
   - component: {fileID: 5639034967631456546}
+  - component: {fileID: -1442162449066742868}
   m_Layer: 0
   m_Name: catfish
   m_TagString: Fish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2606692779898074277
 Transform:
   m_ObjectHideFlags: 0
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 0e0b723542200104ebb7e97ab25b8669, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -93,7 +94,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2606692779898074281}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -119,13 +120,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fishSpeed: -10
-  fishScore: 1
   rb: {fileID: 0}
   movment: {x: 0, y: 0}
-  Hook: {fileID: 0}
-  rope: {fileID: 0}
-  hinge: {fileID: 0}
-  catching: 0
 --- !u!60 &5639034967631456546
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -180,3 +176,16 @@ PolygonCollider2D:
       - {x: 0.38831043, y: -0.09108061}
       - {x: 0.30240116, y: -0.003985709}
       - {x: 0.39554024, y: 0.076503046}
+--- !u!114 &-1442162449066742868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2606692779898074281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fdac02b34e686744975c02bfcc3e67d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fishScore: 1

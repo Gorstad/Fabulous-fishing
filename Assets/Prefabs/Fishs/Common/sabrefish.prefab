@@ -13,13 +13,14 @@ GameObject:
   - component: {fileID: 9163029896178278424}
   - component: {fileID: 4071713939688347240}
   - component: {fileID: 7620709281282237175}
+  - component: {fileID: 3404927800217967086}
   m_Layer: 0
   m_Name: sabrefish
   m_TagString: Fish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6460103537801451721
 Transform:
   m_ObjectHideFlags: 0
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: df03830c3494ffd4b8f76c7e68477595, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -93,7 +94,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3739210314189529924}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -119,13 +120,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fishSpeed: -5.2
-  fishScore: 1
   rb: {fileID: 0}
   movment: {x: 0, y: 0}
-  Hook: {fileID: 0}
-  rope: {fileID: 0}
-  hinge: {fileID: 0}
-  catching: 0
 --- !u!60 &7620709281282237175
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -174,3 +170,16 @@ PolygonCollider2D:
       - {x: 0.26232156, y: -0.017802397}
       - {x: 0.27232158, y: -0.005082678}
       - {x: 0.20568755, y: 0.04420364}
+--- !u!114 &3404927800217967086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3739210314189529924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fdac02b34e686744975c02bfcc3e67d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fishScore: 1

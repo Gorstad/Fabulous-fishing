@@ -5,7 +5,17 @@ using UnityEngine;
 public class InteractFish : MonoBehaviour
 {
     private bool OnHook = false;
-   void Update()
+    public bool Eaten = false;
+   [SerializeField] int fishScore = 1;
+
+   
+
+   void Start()
+   {
+     
+   }
+  
+   void FixedUpdate()
    {
     Catching();  
    }
@@ -22,19 +32,42 @@ public class InteractFish : MonoBehaviour
             break;
 
             case "Player":
-              OnHook = true;    
+              OnHook = true;
+              
             break;
+
+            case "Pike":
+            if(gameObject.tag =="FishOnHook")
+            {
+             AteOFHook();
+            }
+            else
+            {
+              Hunt();
+            }
+              break;
              
         }
+    
     }
    private void Catching()
             { 
-            //    SendMessage("CollissionEnabled");
-              if(transform.position.y > 1.4f & OnHook)
+              if(transform.position.y > 1.3f && OnHook)
               {
                 DestroyFish();
                 print("Catch");
               }
             }
+   private void Hunt()
+   {
+    Invoke("DestroyFish",0.2f);
+    print("Hunt");
+   }
+   private void AteOFHook()
+   {
+     Invoke("DestroyFish",0.1f);
+     GameObject.Find("hoook").SendMessage("HookActivate");
+     
+   }
 }
     

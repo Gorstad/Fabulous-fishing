@@ -13,13 +13,14 @@ GameObject:
   - component: {fileID: 6254379802181069629}
   - component: {fileID: 6254379802181069630}
   - component: {fileID: 6254379802181069631}
+  - component: {fileID: 5617700614023884349}
   m_Layer: 0
   m_Name: dace
   m_TagString: Fish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6254379802181069627
 Transform:
   m_ObjectHideFlags: 0
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: ab7e7419a7cfcef469d6872247a2dd19, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -93,7 +94,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6254379802181069616}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -119,13 +120,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fishSpeed: -4
-  fishScore: 1
   rb: {fileID: 0}
   movment: {x: 0, y: 0}
-  Hook: {fileID: 1214294555359773999, guid: ce2fa8752076475488b76f1709ab8b17, type: 3}
-  rope: {fileID: 0}
-  hinge: {fileID: 0}
-  catching: 0
 --- !u!60 &6254379802181069631
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -172,3 +168,16 @@ PolygonCollider2D:
       - {x: 0.2221599, y: -0.11154278}
       - {x: 0.15991856, y: -0.009808833}
       - {x: 0.23623423, y: 0.06310662}
+--- !u!114 &5617700614023884349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6254379802181069616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fdac02b34e686744975c02bfcc3e67d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fishScore: 1
