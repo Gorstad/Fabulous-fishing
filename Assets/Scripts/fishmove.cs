@@ -12,6 +12,7 @@ public class fishmove : MonoBehaviour
     private Transform _hook;
     private Vector3 _hookOffset;
     private bool _isCatched;
+
     void Start()
     {
       rb = GetComponent<Rigidbody2D>();
@@ -25,13 +26,13 @@ public class fishmove : MonoBehaviour
       else
       {
        followTheHook();
+      //  rb.MoveRotation(90);
       }
     }
      public void Catched(Transform hook)
     {
         _isCatched = true;
          gameObject.tag ="FishOnHook";
-        //  transform.localRotation  = Quaternion.Euler (0f,0f,-90f);
         _hook = hook;
         _hookOffset = transform.position - _hook.transform.position;
         

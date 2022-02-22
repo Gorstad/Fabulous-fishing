@@ -8,7 +8,7 @@ public class SimpleTimer : MonoBehaviour
     [SerializeField] private float time;
     [SerializeField] private Image timerImage;
  
-    public float _timeLeft = 0f;
+    public  float _timeLeft = 0f;
  
     private IEnumerator StartTimer()
     {

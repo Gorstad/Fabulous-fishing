@@ -36,13 +36,17 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\SimpleTimer.cs" />
-     <Compile Include="Assets\Scripts\FishGenerator.cs" />
-     <Compile Include="Assets\Scripts\fishmove.cs" />
-     <Compile Include="Assets\Scripts\HookControl.cs" />
-     <Compile Include="Assets\Scripts\Hook.cs" />
      <Compile Include="Assets\Scripts\fishMovment.cs" />
+     <Compile Include="Assets\Scripts\SimpleTimer.cs" />
+     <Compile Include="Assets\Scripts\World_1Menu.cs" />
+     <Compile Include="Assets\Scripts\LevelManager.cs" />
+     <Compile Include="Assets\Scripts\FishGenerator.cs" />
      <Compile Include="Assets\Scripts\InteractFish.cs" />
+     <Compile Include="Assets\Scripts\fishmove.cs" />
+     <Compile Include="Assets\Scripts\Hook.cs" />
+     <Compile Include="Assets\Scripts\HookControl.cs" />
+     <Compile Include="Assets\Scripts\ManagerScene.cs" />
+     <Compile Include="Assets\Scripts\Score.cs" />
     <Reference Include="UnityEngine">
         <HintPath>D:\unity\2020.3.22f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

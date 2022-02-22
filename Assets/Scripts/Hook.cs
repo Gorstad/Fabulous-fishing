@@ -9,7 +9,7 @@ public class Hook : MonoBehaviour
     [SerializeField] float BotHook= -1f;
     float newYpos;
     private bool Spoil = false;
-
+    private bool Play = true;
     private bool SpoilEat;
 
     void Start()
@@ -18,10 +18,14 @@ public class Hook : MonoBehaviour
     }
     void Update()
     {
-     MoveHook(); 
+        if(Play)
+        {
+          MoveHook(); 
+        }
+     
     }
     public void MoveHook()
-    {
+    {   
         if(SystemInfo.deviceType == DeviceType.Desktop)
         {
             Vector2 screeenPosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
@@ -32,7 +36,7 @@ public class Hook : MonoBehaviour
             {
              transform.position = new Vector2(transform.position.x,newYpos);
             }
-            if(worldPosition.y + yOffset > 1.3f && Spoil)
+            if(worldPosition.y + yOffset > 1.4f && Spoil)
           {
            Spoil = false;
           }
@@ -48,17 +52,17 @@ public class Hook : MonoBehaviour
             transform.position = new Vector2(transform.position.x, touchPosition.y + newYpos);
             
         }
-        if(touchPosition.y + yOffset > 1.3f && Spoil )
+        if(touchPosition.y + yOffset > 1.4f && Spoil )
           {
            Spoil = false;
           }
-     }
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.TryGetComponent<fishmove>(out fishmove fish) && !Spoil) 
         {
-            fish.Catched(this.transform);
+            fish.Catched (this.transform);
             Spoil = true;     
         }
     }
@@ -67,5 +71,9 @@ public class Hook : MonoBehaviour
      print("опа");
      Spoil = false;
     }
-    
+    private void StopPlay()
+    {
+        Play = false;
+    }
+  
 }

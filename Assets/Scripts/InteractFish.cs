@@ -6,13 +6,15 @@ public class InteractFish : MonoBehaviour
 {
     private bool OnHook = false;
     public bool Eaten = false;
-   [SerializeField] int fishScore = 1;
+   [SerializeField] int fishScoreAdd = 1;
+
+   Score scoreboard;
 
    
 
    void Start()
    {
-     
+    scoreboard = FindObjectOfType<Score>(); 
    }
   
    void FixedUpdate()
@@ -33,13 +35,12 @@ public class InteractFish : MonoBehaviour
 
             case "Player":
               OnHook = true;
-              
             break;
 
             case "Pike":
             if(gameObject.tag =="FishOnHook")
             {
-             AteOFHook();
+            Invoke("AteOFHook",0.1f);
             }
             else
             {
@@ -56,6 +57,7 @@ public class InteractFish : MonoBehaviour
               {
                 DestroyFish();
                 print("Catch");
+                scoreboard.ScoreAdd(fishScoreAdd);
               }
             }
    private void Hunt()
@@ -67,7 +69,6 @@ public class InteractFish : MonoBehaviour
    {
      Invoke("DestroyFish",0.1f);
      GameObject.Find("hoook").SendMessage("HookActivate");
-     
    }
 }
     

@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: e4bb0eaa99e912a4e8d374393248b258, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bb07cd50bd9237d4b806e9479ee741fb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -163,4 +163,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fdac02b34e686744975c02bfcc3e67d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fishScore: 1
+  Eaten: 0
+  fishScoreAdd: 1
