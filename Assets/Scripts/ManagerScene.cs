@@ -12,6 +12,7 @@ public class ManagerScene : MonoBehaviour
     Score Cs;
     public GameObject LScreeen;
     public GameObject WScreeen;
+    private bool  LScreen = false;
     void Start()
     {
      
@@ -41,7 +42,11 @@ public class ManagerScene : MonoBehaviour
        Invoke("LoadMenu",5f);
        GameObject.Find("hoook").SendMessage("StopPlay");
        print("Lose");
-       Instantiate(LScreeen);
+       if(!LScreen)
+       {
+        Instantiate(LScreeen);
+       }
+       LScreen = true;
     }   
     private void LoadMenu()
     {
