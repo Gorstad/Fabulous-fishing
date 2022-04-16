@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 5636388630980824455}
   - component: {fileID: 6606578686229201024}
   - component: {fileID: 2561287817747250461}
-  - component: {fileID: 8793279344379602289}
+  - component: {fileID: 1518695103365390991}
+  - component: {fileID: 8010294230751614748}
   m_Layer: 0
   m_Name: pike
   m_TagString: Pike
@@ -138,20 +139,40 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -0.6282766, y: 0.061318874}
-  - {x: -0.49478617, y: 0.0713771}
-  - {x: -0.42790842, y: 0.10760099}
-  - {x: -0.32959273, y: 0.12515995}
-  - {x: -0.3432147, y: 0.03449533}
-  - {x: -0.37743837, y: -0.035138514}
-  - {x: -0.50336355, y: 0.0126561895}
-  - {x: -0.5756545, y: 0.008928755}
-  - {x: -0.6287604, y: 0.058531605}
+  - {x: -0.6199796, y: 0.13633062}
+  - {x: -0.53786874, y: 0.097863585}
+  - {x: -0.47987992, y: 0.094649434}
+  - {x: -0.45173177, y: 0.09425885}
+  - {x: -0.4503246, y: 0.037741538}
+  - {x: -0.41635254, y: -0.038457435}
+  - {x: -0.51312184, y: -0.013365901}
+  - {x: -0.642037, y: -0.044442628}
+  - {x: -0.590744, y: 0.05883301}
+  - {x: -0.6241807, y: 0.14250492}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
---- !u!114 &8793279344379602289
+--- !u!95 &1518695103365390991
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5988322613852293717}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: caaa8061b108a564992106e36ed27449, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8010294230751614748
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -165,3 +186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Eaten: 0
   fishScoreAdd: 1
+  fish: {fileID: 5988322613852293717}
+  fishbone: {fileID: 5988322613852293717}
+  FishAdd: 0
+  ToBucket: {fileID: 5988322613852293717}

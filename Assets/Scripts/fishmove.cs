@@ -12,22 +12,22 @@ public class fishmove : MonoBehaviour
     private Transform _hook;
     private Vector3 _hookOffset;
     private bool _isCatched;
-
+    Animator animator;
     void Start()
     {
+      animator = GetComponent<Animator>();
       rb = GetComponent<Rigidbody2D>();
     }
     void FixedUpdate()
     {
       if(!_isCatched)
-      {
+       {
           rb.MovePosition(rb.position + movment * fishSpeed * Time.fixedDeltaTime);
-      }
+       } 
       else
-      {
+       {
        followTheHook();
-      //  rb.MoveRotation(90);
-      }
+       }
     }
      public void Catched(Transform hook)
     {
@@ -35,7 +35,7 @@ public class fishmove : MonoBehaviour
          gameObject.tag ="FishOnHook";
         _hook = hook;
         _hookOffset = transform.position - _hook.transform.position;
-        
+        animator.SetBool("Catcha",true);
     }
  
     private void followTheHook()

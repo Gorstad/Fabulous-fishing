@@ -440,17 +440,53 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1705508011575545302, guid: 766e40e80085d77458ec26fbe5bf938a, type: 3}
+      propertyPath: EpicFishs.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705508011575545302, guid: 766e40e80085d77458ec26fbe5bf938a, type: 3}
+      propertyPath: RareFishs.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705508011575545302, guid: 766e40e80085d77458ec26fbe5bf938a, type: 3}
+      propertyPath: CommonFishs.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705508011575545302, guid: 766e40e80085d77458ec26fbe5bf938a, type: 3}
+      propertyPath: EpicFishs.Array.data[0]
+      value: 
+      objectReference: {fileID: 925149170676838186, guid: b861aaf7ae3b3d74cb5556cb5bba5b3a, type: 3}
+    - target: {fileID: 1705508011575545302, guid: 766e40e80085d77458ec26fbe5bf938a, type: 3}
+      propertyPath: EpicFishs.Array.data[1]
+      value: 
+      objectReference: {fileID: 607499754090166729, guid: 3be170b2cb765834295897ed42693434, type: 3}
+    - target: {fileID: 1705508011575545302, guid: 766e40e80085d77458ec26fbe5bf938a, type: 3}
+      propertyPath: EpicFishs.Array.data[2]
+      value: 
+      objectReference: {fileID: 916429162745542396, guid: dfd476c9896ad1e44b9e4a8ad7655bfe, type: 3}
+    - target: {fileID: 1705508011575545302, guid: 766e40e80085d77458ec26fbe5bf938a, type: 3}
+      propertyPath: EpicFishs.Array.data[3]
+      value: 
+      objectReference: {fileID: 916429162745542396, guid: cbabd1b1e667af34db29af53ead51058, type: 3}
+    - target: {fileID: 1705508011575545302, guid: 766e40e80085d77458ec26fbe5bf938a, type: 3}
       propertyPath: CommonFishs.Array.data[0]
       value: 
-      objectReference: {fileID: 6254379802181069616, guid: 0c0f42ef91226774f81fc2aa8163634b, type: 3}
+      objectReference: {fileID: 2517082742536327005, guid: 242db0865ce499b46addef8e4a06eaa1, type: 3}
     - target: {fileID: 1705508011575545302, guid: 766e40e80085d77458ec26fbe5bf938a, type: 3}
       propertyPath: CommonFishs.Array.data[1]
       value: 
-      objectReference: {fileID: 210202559252976255, guid: 38b8a0db46ff78543929b7019163aecb, type: 3}
+      objectReference: {fileID: 6254379802181069616, guid: 0c0f42ef91226774f81fc2aa8163634b, type: 3}
     - target: {fileID: 1705508011575545302, guid: 766e40e80085d77458ec26fbe5bf938a, type: 3}
       propertyPath: CommonFishs.Array.data[2]
       value: 
-      objectReference: {fileID: 2517082742536327005, guid: 242db0865ce499b46addef8e4a06eaa1, type: 3}
+      objectReference: {fileID: 4363896684523735944, guid: 0020663cc0eff67468d9d90d0eaa52a7, type: 3}
+    - target: {fileID: 1705508011575545302, guid: 766e40e80085d77458ec26fbe5bf938a, type: 3}
+      propertyPath: CommonFishs.Array.data[3]
+      value: 
+      objectReference: {fileID: 6837081157441107271, guid: eaf2421548f2d204f8f38b54b8e905a8, type: 3}
+    - target: {fileID: 1705508011575545302, guid: 766e40e80085d77458ec26fbe5bf938a, type: 3}
+      propertyPath: CommonFishs.Array.data[4]
+      value: 
+      objectReference: {fileID: 3739210314189529924, guid: ec6642bab648e7b499d1bad316652416, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 766e40e80085d77458ec26fbe5bf938a, type: 3}
 --- !u!1001 &1679621802
@@ -589,7 +625,7 @@ SpriteRenderer:
   m_Size: {x: 0.44, y: 0.09}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1973133969

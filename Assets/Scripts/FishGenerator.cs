@@ -9,17 +9,16 @@ public class FishGenerator : MonoBehaviour
     public GameObject[] EpicFishs;
     public GameObject Pike;
     // Время спавна обычных рыб
-    [SerializeField] float Cmin = 1f;
-    [SerializeField] float Cmax = 2f;
+    [SerializeField][Tooltip("минимальное время спавна обычных рыб")] float Cmin = 1f;
+    [SerializeField][Tooltip("максимальное время спавна обычных рыб")] float Cmax = 2f;
     // Время спавна редких рыб
-    [SerializeField] float Rmin =2f;
-    [SerializeField] float Rmax = 3f;
+    [SerializeField][Tooltip("минимальное время спавна редких рыб")] float Rmin =2f;
+    [SerializeField][Tooltip("максимальное время спавна редких рыб")] float Rmax = 3f;
       // Время спавна эпических рыб
-    [SerializeField] float Emin = 3f;
-    [SerializeField] float Emax = 4f;
+    [SerializeField] [Tooltip("минимальное время спавна епических рыб")] float Emin = 3f;
+    [SerializeField][Tooltip("максимальное время спавна епических рыб")] float Emax = 4f;
     [SerializeField] float Pmin = 4f;
     [SerializeField] float Pmax = 5f;
-    // Start is called before the first frame update
     void Start()
     {
       StartCoroutine(createCommFish());
@@ -29,17 +28,16 @@ public class FishGenerator : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     void Update()
     {
      
     }
-    // Создание рыб обычной редкости
+    // Спавн рыб обычной редкости
       IEnumerator createCommFish()
     {
         yield return new WaitForSeconds (Random.Range (Cmin,Cmax));
         int common = Random.Range(0, CommonFishs.Length);
-        GameObject fish = Instantiate(CommonFishs[1]); 
+        GameObject fish = Instantiate(CommonFishs[common]); 
         bool rightFish = Random.Range(0,2) == 1;
         float y = Random.Range(-4.55f,-0.65f);
         float x;
@@ -57,7 +55,7 @@ public class FishGenerator : MonoBehaviour
         fish.GetComponent<Transform>().position = new Vector2(x,y);
         StartCoroutine(createCommFish());
     }
-     // Создание редких рыб
+     // Спавн  редких рыб
     IEnumerator createRareFish()
     {
         yield return new WaitForSeconds (Random.Range (Rmin,Rmax));
@@ -80,7 +78,7 @@ public class FishGenerator : MonoBehaviour
         fish.GetComponent<Transform>().position = new Vector2(x,y);
         StartCoroutine(createRareFish());
     }
-    // Создание эпических рыб
+    // Спавн  эпических рыб
     IEnumerator createEpicFish()
     {
         yield return new WaitForSeconds (Random.Range (Emin,Emax));
@@ -103,6 +101,7 @@ public class FishGenerator : MonoBehaviour
         fish.GetComponent<Transform>().position = new Vector2(x,y);
         StartCoroutine(createEpicFish());
     }
+    // Спавн  Щуки
     IEnumerator createPike()
       {
        yield return new WaitForSeconds (Random.Range(Pmin,Pmax));

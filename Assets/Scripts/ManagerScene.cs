@@ -19,10 +19,10 @@ public class ManagerScene : MonoBehaviour
     }
     void FixedUpdate()
     {
-    //  RemainingTime = FindObjectOfType<SimpleTimer>()._timeLeft;
+    
      Rt = GameObject.Find("Time").GetComponent<SimpleTimer>();
      RemainingTime = Rt._timeLeft;
-    //  CurrentScore = FindObjectOfType<Score>().score;
+
      Cs = GameObject.Find("Score").GetComponent<Score>();
      CurrentScore = Cs.score;
      

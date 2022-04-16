@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6254379802181069630}
   - component: {fileID: 6254379802181069631}
   - component: {fileID: 5617700614023884349}
+  - component: {fileID: 2220581268115520077}
   m_Layer: 0
   m_Name: dace
   m_TagString: Fish
@@ -147,27 +148,15 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.22376576, y: 0.07434084}
-      - {x: 0.093131796, y: 0.013501391}
-      - {x: 0.021500794, y: 0.05055403}
-      - {x: 0.023917286, y: 0.111968055}
-      - {x: -0.02563865, y: 0.09396536}
-      - {x: -0.05382656, y: 0.06566933}
-      - {x: -0.09840814, y: 0.06373102}
-      - {x: -0.1721599, y: 0.033352092}
-      - {x: -0.24092567, y: 0.004340809}
-      - {x: -0.24092567, y: -0.018990211}
-      - {x: -0.12030856, y: -0.08495795}
-      - {x: -0.06838837, y: -0.08958727}
-      - {x: -0.034999914, y: -0.12017542}
-      - {x: -0.01892637, y: -0.08089755}
-      - {x: 0.014045648, y: -0.068972364}
-      - {x: 0.045228094, y: -0.10341753}
-      - {x: 0.085339, y: -0.03135007}
-      - {x: 0.10629711, y: -0.033292666}
-      - {x: 0.2221599, y: -0.11154278}
-      - {x: 0.15991856, y: -0.009808833}
-      - {x: 0.23623423, y: 0.06310662}
+    - - {x: 0.050315004, y: 0.013786464}
+      - {x: -0.059684873, y: 0.033786446}
+      - {x: -0.1419802, y: 0.018508941}
+      - {x: -0.1785968, y: 0.0029751845}
+      - {x: -0.17861244, y: -0.0305221}
+      - {x: -0.107812874, y: -0.060522124}
+      - {x: -0.051794194, y: -0.06597188}
+      - {x: 0.043024614, y: -0.04142524}
+      - {x: 0.056392368, y: -0.021942569}
 --- !u!114 &5617700614023884349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,3 +171,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Eaten: 0
   fishScoreAdd: 1
+  fish: {fileID: 6254379802181069616}
+  fishbone: {fileID: 5532402135622931066, guid: 9064b8d4f81aa01468695bef5408f558, type: 3}
+  FishAdd: 0
+  ToBucket: {fileID: 3922617100229547401, guid: 6fff511dea3e4744aaf868e19d413200, type: 3}
+--- !u!95 &2220581268115520077
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6254379802181069616}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 410df765d616c624593b72974445e20a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

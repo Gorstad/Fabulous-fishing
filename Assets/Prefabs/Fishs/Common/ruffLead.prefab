@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6837081157441107273}
   - component: {fileID: 6837081157441107272}
   - component: {fileID: 2740508916217342853}
+  - component: {fileID: 803105310458486740}
   m_Layer: 0
   m_Name: ruffLead
   m_TagString: Fish
@@ -30,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 6837081157441107271}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.1577, y: -1.3825, z: 0.42149052}
-  m_LocalScale: {x: 2.2981737, y: 2.3365707, z: 2.685096}
+  m_LocalScale: {x: 2.2981737, y: 2.336571, z: 2.685096}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -147,35 +148,16 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.2520525, y: 0.04739061}
-      - {x: 0.25221166, y: 0.05735088}
-      - {x: 0.23492037, y: 0.06480112}
-      - {x: 0.17435265, y: 0.013941258}
-      - {x: 0.124633774, y: 0.004461374}
-      - {x: 0.10779666, y: 0.05584829}
-      - {x: 0.06373468, y: 0.06831957}
-      - {x: 0.01410674, y: 0.03662099}
-      - {x: -0.032414764, y: 0.10688233}
-      - {x: -0.061692566, y: 0.11618096}
-      - {x: -0.10267846, y: 0.099401996}
-      - {x: -0.12675333, y: 0.060610298}
-      - {x: -0.13435237, y: 0.026160726}
-      - {x: -0.24199264, y: 0.004207261}
-      - {x: -0.25521296, y: -0.009706015}
-      - {x: -0.252132, y: -0.010258549}
-      - {x: -0.24954274, y: -0.015159067}
-      - {x: -0.2595824, y: -0.039980095}
-      - {x: -0.2647613, y: -0.044920422}
-      - {x: -0.20739065, y: -0.07484084}
-      - {x: -0.11491411, y: -0.07447886}
-      - {x: -0.05924941, y: -0.13728303}
-      - {x: -0.04511926, y: -0.08990055}
-      - {x: 0.052257847, y: -0.08737516}
-      - {x: 0.09001983, y: -0.12762925}
-      - {x: 0.13241735, y: -0.062182505}
-      - {x: 0.18864916, y: -0.058895502}
-      - {x: 0.2546818, y: -0.09009948}
-      - {x: 0.23950271, y: -0.0125298165}
+    - - {x: 0.14853527, y: -0.008099154}
+      - {x: 0.072662026, y: -0.0017288895}
+      - {x: -0.042068675, y: 0.005325025}
+      - {x: -0.104784854, y: -0.0024174755}
+      - {x: -0.1905666, y: -0.027087212}
+      - {x: -0.1905558, y: -0.044306062}
+      - {x: -0.17007074, y: -0.05066583}
+      - {x: -0.08843236, y: -0.05186926}
+      - {x: 0.045914505, y: -0.04848396}
+      - {x: 0.14324458, y: -0.020836191}
 --- !u!114 &2740508916217342853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,3 +172,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Eaten: 0
   fishScoreAdd: 1
+  fish: {fileID: 6837081157441107271}
+  fishbone: {fileID: 5532402135622931066, guid: 6cf2a66a33653374faf1139ae8fe491a, type: 3}
+  FishAdd: 0
+  ToBucket: {fileID: 9098848437795606113, guid: 8d6b51771a6220c438e1927e83d59d85, type: 3}
+--- !u!95 &803105310458486740
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6837081157441107271}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bdcdaa7c361aefd49aaa523dfd7cc54f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

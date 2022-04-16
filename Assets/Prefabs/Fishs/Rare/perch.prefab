@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 916429162745542397}
   - component: {fileID: 916429162745542385}
   - component: {fileID: -3356541057508498693}
+  - component: {fileID: 4091738756813424531}
   m_Layer: 0
   m_Name: perch
   m_TagString: Fish
@@ -31,8 +32,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.7397, y: -1.4969, z: 0.42149052}
   m_LocalScale: {x: 3.4325871, y: 3.3994172, z: 3}
-  m_Children:
-  - {fileID: 990018592603576737}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -148,30 +148,21 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.23932828, y: -0.018162029}
-      - {x: 0.26911378, y: 0.051835325}
-      - {x: 0.24984787, y: 0.05631616}
-      - {x: 0.16832536, y: 0.016108021}
-      - {x: 0.12447277, y: 0.03115907}
-      - {x: 0.1301521, y: 0.053961635}
-      - {x: 0.059112314, y: 0.07513359}
-      - {x: 0.045495298, y: 0.044199377}
-      - {x: 0.020421868, y: 0.053326115}
-      - {x: -0.07868385, y: 0.11565806}
-      - {x: -0.13779762, y: 0.0677844}
-      - {x: -0.20278436, y: 0.030367052}
-      - {x: -0.27374667, y: -0.020443086}
-      - {x: -0.275291, y: -0.03183533}
-      - {x: -0.17425267, y: -0.074999996}
-      - {x: -0.10837964, y: -0.08631612}
-      - {x: -0.06572342, y: -0.12917688}
-      - {x: -0.024873571, y: -0.08789791}
-      - {x: 0.048151463, y: -0.07087303}
-      - {x: 0.103831775, y: -0.10735446}
-      - {x: 0.10058201, y: -0.045658097}
-      - {x: 0.16972584, y: -0.029011901}
-      - {x: 0.26992396, y: -0.07484788}
-      - {x: 0.28610116, y: -0.06720238}
+    - - {x: 0.15017045, y: -0.004048754}
+      - {x: 0.11454004, y: 0.007333927}
+      - {x: 0.03196326, y: 0.0214225}
+      - {x: -0.059141066, y: 0.044148214}
+      - {x: -0.12349693, y: 0.04278537}
+      - {x: -0.20035167, y: 0.002280204}
+      - {x: -0.21629709, y: -0.019991457}
+      - {x: -0.21361971, y: -0.03455708}
+      - {x: -0.19441725, y: -0.047742784}
+      - {x: -0.11380367, y: -0.06731131}
+      - {x: -0.023497827, y: -0.062023204}
+      - {x: 0.03687127, y: -0.046873927}
+      - {x: 0.08116569, y: -0.042291317}
+      - {x: 0.106441885, y: -0.02913972}
+      - {x: 0.14882901, y: -0.024131179}
 --- !u!114 &-3356541057508498693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,33 +177,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Eaten: 0
   fishScoreAdd: 1
---- !u!1 &2971381914341029790
-GameObject:
+  fish: {fileID: 916429162745542396}
+  fishbone: {fileID: 5532402135622931066, guid: 9064b8d4f81aa01468695bef5408f558, type: 3}
+  FishAdd: 0
+  ToBucket: {fileID: 1973673212726931279, guid: a15d107b3afcf134494c16122bd7f69a, type: 3}
+--- !u!95 &4091738756813424531
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 990018592603576737}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &990018592603576737
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2971381914341029790}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.008954692, y: 0.03220721, z: -0.003201435}
-  m_LocalScale: {x: 0.29132548, y: 0.29416806, z: 0.33333334}
-  m_Children: []
-  m_Father: {fileID: 916429162745542384}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 916429162745542396}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c51d135640c72794f86fb5ed8364214f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

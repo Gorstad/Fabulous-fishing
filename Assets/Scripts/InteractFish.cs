@@ -7,11 +7,11 @@ public class InteractFish : MonoBehaviour
     private bool OnHook = false;
     public bool Eaten = false;
    [SerializeField] int fishScoreAdd = 1;
-
    Score scoreboard;
-
-   
-
+   public GameObject fish;
+   public GameObject fishbone;
+   public bool FishAdd = false;
+   [SerializeField] GameObject ToBucket;
    void Start()
    {
     scoreboard = FindObjectOfType<Score>(); 
@@ -19,7 +19,11 @@ public class InteractFish : MonoBehaviour
   
    void FixedUpdate()
    {
-    Catching();  
+     if(transform.position.y > 1.27f && OnHook)
+    {
+     Catching();
+    }
+   
    }
    private void DestroyFish()
    {
@@ -53,15 +57,15 @@ public class InteractFish : MonoBehaviour
     }
    private void Catching()
             { 
-              if(transform.position.y > 1.3f && OnHook)
-              {
-                DestroyFish();
                 print("Catch");
                 scoreboard.ScoreAdd(fishScoreAdd);
-              }
+                FishAdd = true;
+                Instantiate(ToBucket);
+                DestroyFish(); 
             }
    private void Hunt()
    {
+    CreateBone(fish,fishbone);
     Invoke("DestroyFish",0.2f);
     print("Hunt");
    }
@@ -70,5 +74,9 @@ public class InteractFish : MonoBehaviour
      Invoke("DestroyFish",0.1f);
      GameObject.Find("hoook").SendMessage("HookActivate");
    }
+    public void CreateBone(GameObject fish, GameObject bone)
+    {
+    var child =  Instantiate(bone,fish.transform.position,Quaternion.identity);
+    }
 }
     

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4071713939688347240}
   - component: {fileID: 7620709281282237175}
   - component: {fileID: 3404927800217967086}
+  - component: {fileID: 4372395489284299762}
   m_Layer: 0
   m_Name: sabrefish
   m_TagString: Fish
@@ -147,29 +148,17 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.25008267, y: 0.10868144}
-      - {x: 0.14924332, y: 0.05971711}
-      - {x: 0.06331995, y: 0.056670286}
-      - {x: 0.058717567, y: 0.09780536}
-      - {x: 0.04602422, y: 0.097519174}
-      - {x: 0.012321582, y: 0.06244556}
-      - {x: -0.1665397, y: 0.042025346}
-      - {x: -0.26960185, y: 0.021964736}
-      - {x: -0.2628024, y: -0.0010030186}
-      - {x: -0.23416229, y: -0.029643157}
-      - {x: -0.19363318, y: -0.056959536}
-      - {x: -0.06464315, y: -0.059725843}
-      - {x: -0.026268896, y: -0.09617669}
-      - {x: -0.0015292317, y: -0.08496942}
-      - {x: -0.014185397, y: -0.05425499}
-      - {x: 0.011442557, y: -0.05020666}
-      - {x: 0.074560486, y: -0.05876411}
-      - {x: 0.05854305, y: -0.025196698}
-      - {x: 0.11630895, y: 0.003718948}
-      - {x: 0.16535592, y: 0.0066545196}
-      - {x: 0.26232156, y: -0.017802397}
-      - {x: 0.27232158, y: -0.005082678}
-      - {x: 0.20568755, y: 0.04420364}
+    - - {x: 0.09866968, y: 0.02784995}
+      - {x: 0.0028077108, y: 0.030440237}
+      - {x: -0.19800936, y: 0.008925194}
+      - {x: -0.20447445, y: -0.006499443}
+      - {x: -0.1822478, y: -0.02224254}
+      - {x: -0.09092889, y: -0.027828831}
+      - {x: 0.002441451, y: -0.025257085}
+      - {x: 0.033365056, y: -0.01692113}
+      - {x: 0.08184894, y: 0.0003450974}
+      - {x: 0.09312031, y: 0.012930084}
+      - {x: 0.10219143, y: 0.024134612}
 --- !u!114 &3404927800217967086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,3 +173,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Eaten: 0
   fishScoreAdd: 1
+  fish: {fileID: 3739210314189529924}
+  fishbone: {fileID: 5532402135622931066, guid: 03942bd3ab0cd9942bc28d333ca1e46c, type: 3}
+  FishAdd: 0
+  ToBucket: {fileID: 1263089784827359924, guid: a89f12e16ee85144a99d77e796d81f23, type: 3}
+--- !u!95 &4372395489284299762
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3739210314189529924}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: eafdeb9653e7b2b42bb37b87a7c98a35, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

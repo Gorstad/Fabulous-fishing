@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 1839964249}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.002, y: 2.099, z: 0}
-  m_LocalScale: {x: 0.102138504, y: 0.16173525, z: 0.48825738}
+  m_LocalScale: {x: 0.12128948, y: 0.16173525, z: 0.48825738}
   m_Children: []
   m_Father: {fileID: 5345853391404323105}
   m_RootOrder: 0
@@ -70,7 +70,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 6f17adf205e870144b82cf03befbf517, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -176,7 +176,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5345853391404323164}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -205,11 +205,11 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -0.029415369, y: -0.11964769}
-  - {x: -0.025684515, y: -0.16488186}
+  - {x: -0.014971834, y: -0.1153831}
+  - {x: -0.022073613, y: -0.1563527}
   - {x: -0.0018621378, y: -0.11103664}
   - {x: 0.024068438, y: -0.15978211}
-  - {x: 0.028431118, y: -0.12045913}
+  - {x: 0.013987558, y: -0.116194546}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -227,5 +227,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 2
-  TopHook: 3
+  TopHook: 1.9
   BotHook: -4.5
