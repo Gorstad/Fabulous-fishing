@@ -12,6 +12,10 @@ public class InteractFish : MonoBehaviour
    public GameObject fishbone;
    public bool FishAdd = false;
    [SerializeField] GameObject ToBucket;
+   DisabledBait bait;
+   Hook Dhook;
+   Hook Shook;
+
    void Start()
    {
     scoreboard = FindObjectOfType<Score>(); 
@@ -25,10 +29,12 @@ public class InteractFish : MonoBehaviour
     }
    
    }
+
    private void DestroyFish()
    {
     Destroy(gameObject);
    }
+
    void OnTriggerEnter2D(Collider2D collision )
     {
         switch(collision.gameObject.tag)
@@ -39,12 +45,18 @@ public class InteractFish : MonoBehaviour
 
             case "Player":
               OnHook = true;
+              if(GameObject.Find("bait")!=null)
+               {
+                bait = GameObject.Find("bait").GetComponent<DisabledBait>();
+                bait.DisabledOverTime();
+               }
+            
             break;
 
             case "Pike":
             if(gameObject.tag =="FishOnHook")
             {
-            Invoke("AteOFHook",0.1f);
+            Invoke("AteOFHook",0.3f);
             }
             else
             {
@@ -55,28 +67,48 @@ public class InteractFish : MonoBehaviour
         }
     
     }
+
    private void Catching()
-            { 
-                print("Catch");
-                scoreboard.ScoreAdd(fishScoreAdd);
-                FishAdd = true;
-                Instantiate(ToBucket);
-                DestroyFish(); 
-            }
+   { 
+     print("Catch");
+     scoreboard.ScoreAdd(fishScoreAdd);
+     FishAdd = true;
+     Instantiate(ToBucket);
+     DestroyFish(); 
+   }
+
    private void Hunt()
    {
     CreateBone(fish,fishbone);
     Invoke("DestroyFish",0.2f);
     print("Hunt");
    }
+
    private void AteOFHook()
    {
-     Invoke("DestroyFish",0.1f);
-     GameObject.Find("hoook").SendMessage("HookActivate");
+     DestroyFish();
+     CreateBone(fish,fishbone);
+    //  GameObject.Find("DoubleHook").SendMessage("HookActivate");
+     ActivatedHook();
    }
+
     public void CreateBone(GameObject fish, GameObject bone)
     {
     var child =  Instantiate(bone,fish.transform.position,Quaternion.identity);
     }
+   private void ActivatedHook()
+   {
+    if(GameObject.Find("DoubleHook")!=null)
+    {
+    Dhook = GameObject.Find("DoubleHook").GetComponent<Hook>();
+    Dhook.HookActivate();
+    }
+    if(GameObject.Find("SingleHook")!=null)
+    {
+    Shook = GameObject.Find("SingleHook").GetComponent<Hook>();
+    Shook.HookActivate();
+    }
+   }
+
 }
     

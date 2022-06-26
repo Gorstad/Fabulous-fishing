@@ -7,8 +7,14 @@ public class SimpleTimer : MonoBehaviour
 {
     [SerializeField] private float time;
     [SerializeField] private Image timerImage;
- 
     public  float _timeLeft = 0f;
+    
+    private void Start()  
+    {
+        ManagerScene.StopGame += DisableTimer;
+        _timeLeft = time;
+        StartCoroutine(StartTimer());
+    }
  
     private IEnumerator StartTimer()
     {
@@ -21,9 +27,10 @@ public class SimpleTimer : MonoBehaviour
         }
     }
  
-    private void Start()
+    
+    public void  DisableTimer()
     {
-        _timeLeft = time;
-        StartCoroutine(StartTimer());
+     ManagerScene.StopGame -= DisableTimer;
+     Destroy(gameObject);
     }
 }

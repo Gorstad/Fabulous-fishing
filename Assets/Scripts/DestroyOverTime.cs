@@ -5,8 +5,13 @@ using UnityEngine;
 public class DestroyOverTime : MonoBehaviour
 {
     [SerializeField] float DestroyTime = 7f;
+    public bool Destruction = true;
     void Start()
     {
-      Destroy(gameObject,DestroyTime);
+      if(Destruction)
+      {
+       Destroy(gameObject,DestroyTime);
+      }
+      
     }
 }

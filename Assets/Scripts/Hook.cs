@@ -6,23 +6,21 @@ public class Hook : MonoBehaviour
 {
     [SerializeField] float Speed = 0.1f;
     [SerializeField] float TopHook = 1f;
-    [SerializeField] float BotHook= -1f;
-    float newYpos;
-    private bool Spoil = false;
+    [SerializeField] float BotHook = -1f;
+    private bool Spoil  = false; 
+    [SerializeField] int CountSpoil;
     private bool Play = true;
     private bool SpoilEat;
+    [SerializeField] int MaxFishOnHook;
 
-    void Start()
-    { 
-        
-    }
+    void Start()=> ManagerScene.StopGame += StopPlay;
+   
     void Update()
     {
         if(Play)
         {
           MoveHook(); 
         }
-     
     }
     public void MoveHook()
     {   
@@ -35,10 +33,16 @@ public class Hook : MonoBehaviour
             if(newYpos < TopHook && newYpos > BotHook)
             {
              transform.position = new Vector2(transform.position.x,newYpos);
+            //  transform.position = Vector2.Lerp(transform.position, Camera.main.ScreenToWorldPoint(Input.mousePosition), Speed);
             }
-            if(worldPosition.y + yOffset > 1.4f && Spoil)
+             // if (newYpos < TopHook && newYpos > BotHook)
+            //   {
+            //     this.transform.position = Vector2.Lerp(transform.position, Camera.main.ScreenToWorldPoint(Input.mousePosition), Speed);
+            //   }
+            if(worldPosition.y + yOffset > 1.27f && Spoil)
           {
            Spoil = false;
+           CountSpoil = 0;
           }
         }
          else if (Input.touchCount > 0)
@@ -52,28 +56,35 @@ public class Hook : MonoBehaviour
             transform.position = new Vector2(transform.position.x, touchPosition.y + newYpos);
             
         }
-        if(touchPosition.y + yOffset > 1.4f && Spoil )
+        if(touchPosition.y + yOffset > 1.27f && Spoil )
           {
            Spoil = false;
+           CountSpoil = 0;
           }
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.TryGetComponent<fishmove>(out fishmove fish) && !Spoil) 
-        {
-            fish.Catched (this.transform);
-            Spoil = true;     
-        }
+         if (collision.TryGetComponent<fishmove>(out fishmove fish) && !Spoil && collision.gameObject.tag == "Fish") 
+         {
+           fish.Catched (this.transform); 
+           CountSpoil ++;
+           if(CountSpoil >=MaxFishOnHook)
+            {
+             Spoil = true; 
+            }
+         }
     }
-    private void HookActivate()
+    public void  HookActivate()
     {
-     print("опа");
      Spoil = false;
+     CountSpoil -= 1;
     }
-    private void StopPlay()
+    public void StopPlay()
     {
-        Play = false;
+      Play = false;
+      ManagerScene.StopGame -= StopPlay;
     }
+    
   
 }

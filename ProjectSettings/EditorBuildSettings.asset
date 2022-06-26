@@ -12,21 +12,30 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 6a8cd06343546ca42a1c2d2edf09caca
   - enabled: 0
-    path: Assets/Scenes/Sandbox.unity
-    guid: db18fd61cdc39e04990837a5ac5466ec
-  - enabled: 1
-    path: Assets/Scenes/Sandbox 1.unity
-    guid: da14d118cc4485847b94d21689f409ff
-  - enabled: 1
-    path: Assets/Scenes/Sandbox 2.unity
-    guid: 969cdb660ad5ba44988cb562c9240618
-  - enabled: 1
-    path: Assets/Scenes/Sandbox 3.unity
-    guid: cb0fb4a1e81ca79499e966c5c619f993
-  - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
+    path: Assets/Scenes/Sandbox 1.unity
+    guid: da14d118cc4485847b94d21689f409ff
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
     path: Assets/Scenes/Lose.unity
     guid: 476c6ba77971ee147a2f8accd1d65a94
+  - enabled: 1
+    path: Assets/Scenes/Sandbox 2.unity
+    guid: 7ee353a8ed2ecd14ea5dd33afc01498a
+  - enabled: 1
+    path: Assets/Scenes/Sandbox 3.unity
+    guid: 2c2cd8cac52488b40891fe19a7bcef29
+  - enabled: 1
+    path: Assets/Scenes/Sandbox 4.unity
+    guid: 201ef14b289d44045a796f3668408d33
   m_configObjects: {}
